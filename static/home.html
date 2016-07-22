@@ -1,0 +1,41 @@
+
+<header>
+       <md-toolbar class='md-medium-tall'>
+         <div class="md-toolbar-tools">
+             <h1>Chef Du Cuisine</h1>
+             <span flex></span>
+             <a href="#/login">Login</a>
+             <a href="#/register">Register</a>
+         </div>
+       </md-toolbar>
+</header>
+
+<div class="regis" ng-controller="chefController">
+  <table class="table">
+     <thead>
+       <tr>
+         <th>Name</th>
+         <th>age</th>
+         <th>Action</th>
+         <th>&nbsp;</th>
+       </tr>
+     </thead>
+<tbody>
+  <tr>
+         <td><input class="form-control" ng-model="chef.name"></td>
+         <td><input class="form-control" ng-model="chef.age"></td>
+
+         <td><md-button class="md-raised md-primary" ng-click="addContact()">Add Details</md-button></td>
+         <td><md-button class="md-raised" ng-click="update()">Update</<md-button></td>
+         <td><md-button class="md-raised" ng-click="deselect()">Clear</<md-button></td>
+  </tr>
+
+
+     <tr ng-repeat="chef in cheflist">
+         <td>{{chef.name}}</td>
+         <td>{{chef.age}}</td>
+         <td><md-button class="md-raised md-warn" ng-click="remove(chef._id)">Remove</md-button></td>
+         <td><md-button class="md-warn md-raised md-hue-2" ng-click="edit(chef._id)">Edit</md-button></td>
+    </tr>
+    </tbody>
+</div>

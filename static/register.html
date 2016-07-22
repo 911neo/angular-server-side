@@ -1,0 +1,32 @@
+<div class="regis">
+
+       <form ng-submit="chefList.addperson()">
+<h1>Registration<h1>
+
+      <md-input-container class="md-icon-float md-block">
+      <input type="text" ng-model="search" placeholder="First Name">
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block">
+      <input type="text" ng-model="search" placeholder="Last Name">
+      </md-input-container>
+      <md-datepicker ng-model="search" md-placeholder="Enter date"></md-datepicker>
+      <md-radio-group ng-model="search">
+      <md-radio-button value="Banana">Male</md-radio-button>
+      <md-radio-button value="Mango">Female</md-radio-button>
+      </md-radio-group>
+      <md-input-container class="md-block">
+      <input ng-model="search" type="email" placeholder="Email (required)" ng-required="true">
+      </md-input-container>
+      <md-input-container md-no-float class="md-block">
+      <input ng-model="search" type="text" placeholder="Address" >
+      <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+      </md-input-container>
+      <md-input-container class="md-block">
+          <label>Biography</label>
+          <textarea ng-model="search" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+
+
+<md-button class="md-raised md-cornered" type="submit" value="submit">submit</md-button>
+      </form>
+</div>
